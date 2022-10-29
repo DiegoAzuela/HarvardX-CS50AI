@@ -29,7 +29,7 @@ to distinguish spam from non-spam mail based on past experience
   > Processing natural language, which is produced and understood by humans
 
 
-## Aknwoledgments
-  -Please refer to the following repositories as they guided me through most of my questions:
-    - [repo#1] (https://gh.fakev.cn/Rajil1213/cs50AI/blob/master/Week3/crossword/generate.py)
-    - [repo#2] (https://github.com/hadeer98/CS50-ai-crossword-project/blob/main/generate.py)
+## Acknowledgements
+Please refer to the following repositories as they guided me through most of my questions:
+- [repo#1] (https://gh.fakev.cn/Rajil1213/cs50AI/blob/master/Week3/crossword/generate.py)
+- [repo#2] (https://github.com/hadeer98/CS50-ai-crossword-project/blob/main/generate.py)
