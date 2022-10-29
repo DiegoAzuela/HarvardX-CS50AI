@@ -5,10 +5,6 @@
 ## Courseload includes the following:
   - Introduction
   - Search
-    - Finding a solution to a problem, like a navigator app that �nds the best route from your origin
-Lecture 0 - CS50's Introduction to Artificial Intelligence with Python https://cs50.harvard.edu/ai/2020/notes/0/
-1 de 14 27/06/2022 11:03 a. m.
-to the destination, or like playing a game and �guring out the next move.
   - Knowledge
   - Uncertainty
   - Optimization
@@ -16,5 +12,22 @@ to the destination, or like playing a game and �guring out the next move.
   - Neural Networks
   - Language
   
+### Search
+  > Finding a solution to a problem, like a navigator app that finnds the best route from your origin to the destination, or like playing a game and figuring out the next move.
+### Knowledge
+  > Representing information and drawing inferences from it.
+### Uncertainty
+  > Dealing with uncertain events using probability
+### Optimization
+  > Finding not only a correct way to solve a problem, but a better—or the best—way to solve it
+### Learning
+  > Improving performance based on access to data and experience. For example, your email is able
+to distinguish spam from non-spam mail based on past experience
+### Neural Networks
+  > A program structure inspired by the human brain that is able to perform tasks effectively
+### Language
+  > Processing natural language, which is produced and understood by humans
+
+
 ## Aknwoledgments
-  -
+  > Please refer to the following repositories as they guided me through most of my questions
