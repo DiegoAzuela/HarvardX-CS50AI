@@ -2,16 +2,7 @@
 [Course Link] (https://learning.edx.org/course/course-v1:HarvardX+CS50AI+1T2020/home)
 > Coursework for HarvardX CS50 AI course being offered in EdX
 
-## Courseload includes the following:
-  - Introduction
-  - Search
-  - Knowledge
-  - Uncertainty
-  - Optimization
-  - Learning
-  - Neural Networks
-  - Language
-  
+## Courseload includes the following: 
 ### Search
   > Finding a solution to a problem, like a navigator app that finnds the best route from your origin to the destination, or like playing a game and figuring out the next move.
 ### Knowledge
@@ -31,5 +22,5 @@ to distinguish spam from non-spam mail based on past experience
 
 ## Acknowledgements
 Please refer to the following repositories as they guided me through most of my questions:
-- [repo#1] (https://gh.fakev.cn/Rajil1213/cs50AI/blob/master/Week3/crossword/generate.py)
-- [repo#2] (https://github.com/hadeer98/CS50-ai-crossword-project/blob/main/generate.py)
+- [repo#1](https://gh.fakev.cn/Rajil1213/cs50AI/blob/master/Week3/crossword/generate.py)
+- [repo#2](https://github.com/hadeer98/CS50-ai-crossword-project/blob/main/generate.py)
