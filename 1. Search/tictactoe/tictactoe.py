@@ -22,7 +22,7 @@ def initial_state():
 
 def player(board):
     """
-    Returns player who has the next turn on a board.
+    Returns player who is to play in the board now.
     """
     # Set a counter to see how many moves have happened.
     count = 0
@@ -36,6 +36,14 @@ def player(board):
         return X
     # Any return value is acceptable if a terminal board is provided as input (i.e., the game is already over).
     return O
+
+
+def alt_player(board):
+    """
+    Returns player is to play on the board next
+    """
+    if player(board) == X: return O
+    else: return X
 
 
 def actions(board):
@@ -58,7 +66,7 @@ def result(board, action):
     """
     # First check if the action is possible
     if (action not in actions(board)):
-        raise Exception("This is not a valid action for the current game, please try again")
+        raise Exception("There are no valid actions left for the current game, please try again")
     # Create a deep copy of the board
     temp_board = copy.deepcopy(board)
     # In the new board, place the players action
@@ -152,6 +160,8 @@ def minimax(board):
         # Returns the action that would make the player and inmediate winner
         if terminal(result(board,action)):
             return action
+        # for action in actions(temp_board):
+        # if temp_board[action[0]][action[1]] = alt_player(temp_board)
         else:
             # For player's 'X' turn, we want to look for '1' in the value board
             if player(board) == X:
