@@ -146,7 +146,7 @@ def minimax(board):
     """
     # If there is no more moves, we cannot continue
     if terminal(board):
-        print("The game is over, the winner was Player ", winner(board))
+        print("The game is over, winner is Player ", winner(board))
         return None
     for action in actions(board):
         # Returns the action that would make the player and inmediate winner
