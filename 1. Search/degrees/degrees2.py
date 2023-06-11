@@ -90,10 +90,48 @@ def shortest_path(source, target):
     that connect the source to the target.
 
     If no possible path, returns None.
-    """
 
-    # TODO
-    raise NotImplementedError
+    Improvements: Current solution does not take into account path_cost, simply takes into account first viable solution
+    """
+    # NOTES: What is required? If this is a game: we need the frontier, number of nodes, number of nodes explored, current node, path cost
+    
+    # Keep track of the Path Cost ('internal use') and Path Cost Result ('displayable')
+    path_cost, path_cost_result = [],[]
+    # Create a set of reviewed actors thus far
+    actors_reviewed = set()
+    # Initialize Node with source as head of the tree
+    tree_start = Node(state = source, parent = None, action = None)
+    # StackFrontier is a parent class to QueueFrontier
+    frontier = QueueFrontier()
+    frontier.add(tree_start)
+
+    while True:
+        # 1. If the frontier is empty, _Stop_ there is no solution to the problem.
+        if frontier.empty():
+            return None
+
+        # 2. Remove a node from the frontier. This is the node that will be considered. -This actor will be updated as 'reviewed'-
+        node = frontier.remove()
+        actors_reviewed.add(node.state)
+        path_cost.append(node.action) 
+        # print(len(path_cost))
+
+        # -Use the function 'neighbors_for_person' to find possible neighbors-
+        neighbors = neighbors_for_person(node.state)
+
+        for movie, actor in neighbors:
+            if (frontier.contains_state(actor) == False) and (actor not in actors_reviewed):
+                child = Node(state = actor, parent = node, action = movie)
+                # 3. If the node contains the goal state, Return the solution _Stop_. --Returns the shortest list of (movie_id, person_id) pairs--
+                if child.state == target:
+                    node = child
+                    path_cost_result.append((node.action, node.state))  
+                    # -Must correct the way the list is displayed-
+                    path_cost_result.reverse() 
+                    print(path_cost_result)
+                    return path_cost_result
+                # 4. Expand the node (find all the new nodes that could be reached from this node), and add resulting nodes to the frontier. Add the current node to the explored set
+                frontier.add(child)
 
 
 def person_id_for_name(name):

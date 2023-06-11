@@ -97,8 +97,6 @@ def shortest_path(source, target):
 
     Improvements: Current solution does not take into account path_cost, simply takes into account first viable solution
     """
-    # TODO
-
     # NOTES: What is required? If this is a game: we need the frontier, number of nodes, number of nodes explored, current node, path cost
     
     # Keep track of the Path Cost ('internal use') and Path Cost Result ('displayable')
