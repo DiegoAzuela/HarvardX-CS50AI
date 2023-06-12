@@ -75,6 +75,21 @@ def result(board, action):
     return temp_board
 
 
+def alt_result(board, action):
+    """
+    Returns the board that results from making move (i, j) on the board.
+    """
+    # First check if the action is possible
+    if (action not in actions(board)):
+        raise Exception("There are no valid actions left for the current game, please try again")
+    # Create a deep copy of the board
+    temp_board = copy.deepcopy(board)
+    # In the new board, place the players action
+    temp_board[action[0]][action[1]] = alt_player(board)
+
+    return temp_board
+
+
 def value_board(board):
     """
     Returns a list of the sum of every column, row and vertical combination
@@ -157,8 +172,11 @@ def minimax(board):
         print("The game is over, winner is Player ", winner(board))
         return None
     for action in actions(board):
-        # Returns the action that would make the player and inmediate winner
-        if terminal(result(board,action)):
+        # Returns the action that would make the current player an inmediate winner, ensuring their own victory - SEEMS TO WORK
+        if terminal(result(board,action)): 
+            return action
+        # Returns the action that would make the other player an inmediate winner, blocking their move - SEEMS TO WORK
+        elif terminal(alt_result(board,action)): 
             return action
         # for action in actions(temp_board):
         # if temp_board[action[0]][action[1]] = alt_player(temp_board)
